@@ -1,0 +1,60 @@
+body {
+  background-color: white;
+  color: black;
+}
+* {
+  padding: 0;
+  margin: 0;
+}
+/* Display row and column */
+.flex-row {
+  display: flex;
+  flex-direction: row;
+}
+.flex-column {
+  display: flex;
+  flex-direction: column;
+}
+/* Colors */
+.color-white {
+  color: white;
+}
+.color-red {
+  color: red;
+}
+.color-black {
+  color: black;
+}
+
+/* Align */
+.text-center {
+  text-align: center;
+}
+.justify-center {
+  justify-content: center;
+}
+.justify-end {
+  justify-content: flex-end;
+}
+.justify-start {
+  justify-content: flex-start;
+}
+.align-center {
+  align-items: center;
+}
+/* Text decor */
+.txt-dec {
+  text-decoration: none;
+}
+
+/* List */
+.list-none {
+  list-style: none;
+}
+/* cursor-pointer */
+.cursor-pointer {
+  cursor: pointer;
+}
+.space-between {
+  justify-content: space-between;
+}
