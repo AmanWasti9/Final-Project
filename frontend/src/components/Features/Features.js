@@ -24,7 +24,10 @@ export default function Features() {
             width: "350px",
             border: "2px solid black",
           }}
-        ></Grid2>
+        > Url summarizer 
+        <br/>
+        Tired of going through multiple webpages? Enter the urls here, summarize your text!
+        </Grid2>
         <Grid2
           xs={12}
           sm={6}
@@ -34,7 +37,12 @@ export default function Features() {
             width: "350px",
             border: "2px solid black",
           }}
-        ></Grid2>
+        > Forum discussions 
+        <br/>
+        Teamwork makes the dream work and plus no one likes to study alone,
+        share your summaries and material with others, get feedback and get that
+        perfect score.
+        </Grid2>
         <Grid2
           xs={12}
           sm={6}
@@ -44,7 +52,11 @@ export default function Features() {
             width: "350px",
             border: "2px solid black",
           }}
-        ></Grid2>
+        > Helper AI 
+        <br/>
+        No body likes to scroll endlessly, we built helperbot
+        to help you navigate through the website easily.
+         </Grid2>
       </Grid2>
     </div>
   );
