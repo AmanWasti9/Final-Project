@@ -1,6 +1,9 @@
 body {
-  background: linear-gradient(250deg, #7edfb2, #0172af);
-  color: white;
+  /* background-image: url("../public/Images/bg.jpg");
+  background-size: cover;
+  background-position: center; */
+  background-color: black;
+  color: #ffffff;
 }
 * {
   padding: 0;

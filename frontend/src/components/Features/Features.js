@@ -3,7 +3,7 @@ import React from "react";
 
 export default function Features() {
   return (
-    <div>
+    <div id="features">
       <h1 className="text-center">Features</h1>
 
       <Grid2
@@ -22,7 +22,7 @@ export default function Features() {
           sx={{
             height: "350px",
             width: "350px",
-            boxShadow: "0 4px 8px rgba(0, 0, 0, 0.2)",
+            boxShadow: "0px 2px 8px #5218fa",
             borderRadius: "15px",
             padding: "20px",
             textAlign: "center",
@@ -46,10 +46,11 @@ export default function Features() {
           sx={{
             height: "350px",
             width: "350px",
-            boxShadow: "0 4px 8px rgba(0, 0, 0, 0.2)",
+            boxShadow: "0 2px 8px #5218fa",
             borderRadius: "15px",
             padding: "20px",
             textAlign: "center",
+            margin: "30px 0px",
           }}
         >
           <h2>Forum Discussions</h2>
@@ -71,7 +72,7 @@ export default function Features() {
           sx={{
             height: "350px",
             width: "350px",
-            boxShadow: "0 4px 8px rgba(0, 0, 0, 0.2)",
+            boxShadow: "0 2px 8px #5218fa",
             borderRadius: "15px",
             padding: "20px",
             textAlign: "center",

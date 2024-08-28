@@ -10,13 +10,13 @@ import { Link } from "react-router-dom";
 import { Link as ScrollLink } from "react-scroll";
 import { GiSkills } from "react-icons/gi";
 import { MdFeaturedPlayList } from "react-icons/md";
-
+import logo from "../../Images/logo.png";
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const MenuContent = (
     <div className="Nav__Menu__Content__Main">
-      <Container style={{ marginBottom: "10px" }}>
+      <Container style={{ margin: "10px 0" }}>
         <div className="Nav__Menu__Content flex-column color-white">
           <span
             style={{
@@ -27,7 +27,12 @@ export default function Header() {
               to="/"
               className="flex-row align-center gap-10 txt-dec color-white"
             >
-              <div>
+              <div
+                className="flex-row align-center"
+                style={{
+                  margin: "0 5px",
+                }}
+              >
                 <IoHome />
               </div>
               <div>
@@ -49,7 +54,12 @@ export default function Header() {
               duration={1000}
               className="flex-row align-center gap-10 txt-dec color-white cursor-pointer"
             >
-              <div>
+              <div
+                className="flex-row align-center"
+                style={{
+                  margin: "0 5px",
+                }}
+              >
                 <MdFeaturedPlayList />
               </div>
               <div>
@@ -58,7 +68,7 @@ export default function Header() {
             </ScrollLink>
           </span>
 
-          <span
+          {/* <span
             style={{
               margin: "10px 0",
             }}
@@ -78,7 +88,7 @@ export default function Header() {
                 <p>About</p>
               </div>
             </ScrollLink>
-          </span>
+          </span> */}
 
           <span
             style={{
@@ -93,7 +103,12 @@ export default function Header() {
               duration={1000}
               className="flex-row align-center gap-10 txt-dec color-white cursor-pointer"
             >
-              <div>
+              <div
+                className="flex-row align-center"
+                style={{
+                  margin: "0 5px",
+                }}
+              >
                 <FaPhone />
               </div>
               <div>
@@ -115,7 +130,15 @@ export default function Header() {
       <Container>
         <div className="Nav__Med">
           <div>
-            <h1 className="Logobrand">Project</h1>
+            {/* <span className="Logobrand"> */}
+            <img
+              src={logo}
+              style={{
+                width: "100px",
+              }}
+            />
+
+            {/* </span> */}
           </div>
           {!isMenuOpen && (
             <div>
@@ -125,7 +148,12 @@ export default function Header() {
                     to="/"
                     className="flex-row justify-center align-center gap-10 txt-dec color-white"
                   >
-                    <div>
+                    <div
+                      className="flex-row align-center"
+                      style={{
+                        margin: "0 5px",
+                      }}
+                    >
                       <IoHome />
                     </div>
                     <div>
@@ -143,7 +171,12 @@ export default function Header() {
                     duration={1000}
                     className="flex-row justify-center align-center gap-10 txt-dec color-white cursor-pointer"
                   >
-                    <div>
+                    <div
+                      className="flex-row align-center"
+                      style={{
+                        margin: "0 5px",
+                      }}
+                    >
                       <MdFeaturedPlayList />
                     </div>
                     <div>
@@ -152,7 +185,7 @@ export default function Header() {
                   </ScrollLink>
                 </span>
 
-                <span>
+                {/* <span>
                   <ScrollLink
                     to="about"
                     spy={true}
@@ -168,7 +201,7 @@ export default function Header() {
                       <p>About</p>
                     </div>
                   </ScrollLink>
-                </span>
+                </span> */}
 
                 <span>
                   <ScrollLink
@@ -179,7 +212,12 @@ export default function Header() {
                     duration={1000}
                     className="flex-row justify-center align-center gap-10 txt-dec color-white cursor-pointer"
                   >
-                    <div>
+                    <div
+                      className="flex-row align-center"
+                      style={{
+                        margin: "0 5px",
+                      }}
+                    >
                       <FaPhone />
                     </div>
                     <div>

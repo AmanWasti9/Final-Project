@@ -43,7 +43,7 @@
   border-top: solid 1px white;
 }
 .Logobrand {
-  font-size: 40px;
+  width: 70px;
   margin: 10px 0;
 }
 .menu-icons-bar {
@@ -57,7 +57,7 @@
 
 @media (max-width: 1024px) {
   .Logobrand {
-    font-size: 36px;
+    width: 70px;
     margin-top: 10px;
   }
   .Nav__Links {
@@ -67,7 +67,7 @@
 
 @media (max-width: 900px) {
   .Logobrand {
-    font-size: 30px;
+    width: 70px;
     margin-top: 5px;
   }
   .Nav__Links {
@@ -80,7 +80,7 @@
 
 @media (max-width: 800px) {
   .Logobrand {
-    font-size: 25px;
+    width: 70px;
   }
   .Nav__Links {
     font-size: 13px;

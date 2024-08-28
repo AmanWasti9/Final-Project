@@ -1,11 +1,8 @@
-/* Hero.css */
-
-/* Base styles for the Hero section */
 .hero {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 50px 20px;
+  padding: 0 20px;
   min-height: 100vh;
   background: transparent;
   color: #fff;
@@ -21,6 +18,7 @@
   font-size: 3rem;
   font-weight: bold;
   margin-bottom: 20px;
+  color: #5218fa;
 }
 
 .hero-description {
@@ -29,11 +27,12 @@
 }
 
 .hero-button {
-  padding: 10px 20px;
+  padding: 17px 20px;
+  margin-left: 10px;
   font-size: 1rem;
   font-weight: bold;
-  color: #003366;
-  background: #fff;
+  color: #fff;
+  background: #5218fa;
   border: none;
   border-radius: 5px;
   cursor: pointer;
@@ -41,7 +40,7 @@
 }
 
 .hero-button:hover {
-  background: #003366;
+  background: #5218fa;
   color: #fff;
 }
 
@@ -55,9 +54,21 @@
   object-fit: cover;
   border-radius: 10px;
 }
-
+.fluid-gradient {
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: center;
+}
 /* Media Query for screens less than 768px */
 @media (max-width: 768px) {
+  .fluid-gradient {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+  }
   .hero {
     flex-direction: column;
     padding: 30px 10px;
