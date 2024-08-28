@@ -21,6 +21,13 @@
   color: #5218fa;
 }
 
+.hero-info {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: white;
+}
+
 .hero-description {
   font-size: 1.25rem;
   margin-bottom: 30px;

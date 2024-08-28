@@ -28,15 +28,12 @@ export default function Features() {
             textAlign: "center",
           }}
         >
-          <h2>URL Summarizer</h2>
+          <h2>Quick Scan & Summarize </h2>
           <br />
-
           <p>
-            Struggling to manage multiple webpages? Our URL Summarizer tool is
-            here to help! Simply input the URLs, and get a concise summary of
-            the content. Whether you're doing research, gathering information,
-            or just need quick insights, this feature saves you time and effort
-            by providing you with the essential points from each page.
+          Instantly scan URLs to extract key information and get concise summaries. 
+          Whether it's a lengthy article or a detailed report, Cogni simplifies content consumption 
+          by providing you with the most important points at a glance.
           </p>
         </Grid2>
         <Grid2
@@ -53,16 +50,12 @@ export default function Features() {
             margin: "30px 0px",
           }}
         >
-          <h2>Forum Discussions</h2>
+          <h2>PDFs Simplified</h2>
           <br />
-
           <p>
-            Collaboration enhances understanding! Our Forum Discussions feature
-            allows you to share your summaries and study materials with peers.
-            Engage in meaningful discussions, receive valuable feedback, and
-            work together to achieve academic excellence. Join the conversation
-            and benefit from collective insights to reach your goals more
-            effectively.
+          Upload your PDFs and let Cogni do the heavy lifting. 
+          Our advanced summarization tool condenses lengthy documents into easily digestible summaries, 
+          helping you save time and focus on what truly matters
           </p>
         </Grid2>
         <Grid2
@@ -78,15 +71,32 @@ export default function Features() {
             textAlign: "center",
           }}
         >
-          <h2>Helper AI</h2>
+          <h2>Engage & Exchange Ideas</h2>
           <br />
           <p>
-            Navigating through a website can sometimes be overwhelming. That's
-            why we developed Helper AI, your personal guide to effortlessly
-            explore our platform. Say goodbye to endless scrolling and confusing
-            menus. Helper AI streamlines your experience by providing quick
-            access to the features and information you need, ensuring a smooth
-            and enjoyable journey.
+          Join a vibrant community of learners and thinkers. Share insights, ask questions, 
+          and participate in discussions that enrich your knowledge. The Cogni forum is your space 
+          for meaningful conversations and collaborative learning.
+          </p>
+        </Grid2>
+        <Grid2
+          xs={12}
+          sm={6}
+          md={4}
+          sx={{
+            height: "350px",
+            width: "350px",
+            boxShadow: "0 2px 8px #5218fa",
+            borderRadius: "15px",
+            padding: "20px",
+            textAlign: "center",
+          }}
+        >
+          <h2>Learn with Flashcards</h2>
+          <br />
+          <p>
+          Enhance your learning with customized flashcards. Whether you're studying for an exam or mastering a new skill, 
+          Cogni's flashcards are designed to reinforce your knowledge through active recall and spaced repetition.
           </p>
         </Grid2>
       </Grid2>
