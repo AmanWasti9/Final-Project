@@ -22,11 +22,22 @@ export default function Features() {
           sx={{
             height: "350px",
             width: "350px",
-            border: "2px solid black",
+            boxShadow: "0 4px 8px rgba(0, 0, 0, 0.2)",
+            borderRadius: "15px",
+            padding: "20px",
+            textAlign: "center",
           }}
-        > Url summarizer 
-        <br/>
-        Tired of going through multiple webpages? Enter the urls here, summarize your text!
+        >
+          <h2>URL Summarizer</h2>
+          <br />
+
+          <p>
+            Struggling to manage multiple webpages? Our URL Summarizer tool is
+            here to help! Simply input the URLs, and get a concise summary of
+            the content. Whether you're doing research, gathering information,
+            or just need quick insights, this feature saves you time and effort
+            by providing you with the essential points from each page.
+          </p>
         </Grid2>
         <Grid2
           xs={12}
@@ -35,13 +46,23 @@ export default function Features() {
           sx={{
             height: "350px",
             width: "350px",
-            border: "2px solid black",
+            boxShadow: "0 4px 8px rgba(0, 0, 0, 0.2)",
+            borderRadius: "15px",
+            padding: "20px",
+            textAlign: "center",
           }}
-        > Forum discussions 
-        <br/>
-        Teamwork makes the dream work and plus no one likes to study alone,
-        share your summaries and material with others, get feedback and get that
-        perfect score.
+        >
+          <h2>Forum Discussions</h2>
+          <br />
+
+          <p>
+            Collaboration enhances understanding! Our Forum Discussions feature
+            allows you to share your summaries and study materials with peers.
+            Engage in meaningful discussions, receive valuable feedback, and
+            work together to achieve academic excellence. Join the conversation
+            and benefit from collective insights to reach your goals more
+            effectively.
+          </p>
         </Grid2>
         <Grid2
           xs={12}
@@ -50,13 +71,23 @@ export default function Features() {
           sx={{
             height: "350px",
             width: "350px",
-            border: "2px solid black",
+            boxShadow: "0 4px 8px rgba(0, 0, 0, 0.2)",
+            borderRadius: "15px",
+            padding: "20px",
+            textAlign: "center",
           }}
-        > Helper AI 
-        <br/>
-        No body likes to scroll endlessly, we built helperbot
-        to help you navigate through the website easily.
-         </Grid2>
+        >
+          <h2>Helper AI</h2>
+          <br />
+          <p>
+            Navigating through a website can sometimes be overwhelming. That's
+            why we developed Helper AI, your personal guide to effortlessly
+            explore our platform. Say goodbye to endless scrolling and confusing
+            menus. Helper AI streamlines your experience by providing quick
+            access to the features and information you need, ensuring a smooth
+            and enjoyable journey.
+          </p>
+        </Grid2>
       </Grid2>
     </div>
   );

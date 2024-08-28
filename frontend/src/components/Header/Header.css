@@ -1,6 +1,6 @@
 .Nav__Main {
-  background-color: white;
-  color: black;
+  background: transparent;
+  color: white;
   /* border-bottom: solid 1px black; */
   padding-top: 10px;
   padding-left: 10px;
@@ -20,7 +20,7 @@
 .Nav__Links {
   display: flex;
   gap: 30px;
-  color: black;
+  color: white;
   font-weight: 600;
   font-size: 20px;
 }
@@ -30,8 +30,8 @@
 }
 .Nav__btn__Link {
   text-decoration: none;
-  color: black;
-  background-color: black;
+  color: white;
+  background-color: white;
   padding: 10px 25px;
   border-radius: 30px;
 }
@@ -40,7 +40,7 @@
   font-size: 18px;
 }
 .Nav__Menu__Content__Main {
-  border-top: solid 1px black;
+  border-top: solid 1px white;
 }
 .Logobrand {
   font-size: 40px;
@@ -48,7 +48,7 @@
 }
 .menu-icons-bar {
   font-size: 40px;
-  color: black;
+  color: white;
   margin-top: -15px;
 }
 .Menu-bar {

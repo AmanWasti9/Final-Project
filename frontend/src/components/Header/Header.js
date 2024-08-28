@@ -17,7 +17,7 @@ export default function Header() {
   const MenuContent = (
     <div className="Nav__Menu__Content__Main">
       <Container style={{ marginBottom: "10px" }}>
-        <div className="Nav__Menu__Content flex-column color-black">
+        <div className="Nav__Menu__Content flex-column color-white">
           <span
             style={{
               margin: "10px 0",
@@ -25,7 +25,7 @@ export default function Header() {
           >
             <Link
               to="/"
-              className="flex-row align-center gap-10 txt-dec color-black"
+              className="flex-row align-center gap-10 txt-dec color-white"
             >
               <div>
                 <IoHome />
@@ -47,7 +47,7 @@ export default function Header() {
               smooth={true}
               offset={-20}
               duration={1000}
-              className="flex-row align-center gap-10 txt-dec color-black cursor-pointer"
+              className="flex-row align-center gap-10 txt-dec color-white cursor-pointer"
             >
               <div>
                 <MdFeaturedPlayList />
@@ -69,7 +69,7 @@ export default function Header() {
               smooth={true}
               offset={-20}
               duration={1000}
-              className="flex-row align-center gap-10 txt-dec color-black cursor-pointer"
+              className="flex-row align-center gap-10 txt-dec color-white cursor-pointer"
             >
               <div>
                 <FaUser />
@@ -91,7 +91,7 @@ export default function Header() {
               smooth={true}
               offset={-20}
               duration={1000}
-              className="flex-row align-center gap-10 txt-dec color-black cursor-pointer"
+              className="flex-row align-center gap-10 txt-dec color-white cursor-pointer"
             >
               <div>
                 <FaPhone />
@@ -123,7 +123,7 @@ export default function Header() {
                 <span>
                   <Link
                     to="/"
-                    className="flex-row justify-center align-center gap-10 txt-dec color-black"
+                    className="flex-row justify-center align-center gap-10 txt-dec color-white"
                   >
                     <div>
                       <IoHome />
@@ -141,7 +141,7 @@ export default function Header() {
                     smooth={true}
                     offset={-20}
                     duration={1000}
-                    className="flex-row justify-center align-center gap-10 txt-dec color-black cursor-pointer"
+                    className="flex-row justify-center align-center gap-10 txt-dec color-white cursor-pointer"
                   >
                     <div>
                       <MdFeaturedPlayList />
@@ -159,7 +159,7 @@ export default function Header() {
                     smooth={true}
                     offset={-20}
                     duration={1000}
-                    className="flex-row justify-center align-center gap-10 txt-dec color-black cursor-pointer"
+                    className="flex-row justify-center align-center gap-10 txt-dec color-white cursor-pointer"
                   >
                     <div>
                       <FaUser />
@@ -177,7 +177,7 @@ export default function Header() {
                     smooth={true}
                     offset={-20}
                     duration={1000}
-                    className="flex-row justify-center align-center gap-10 txt-dec color-black cursor-pointer"
+                    className="flex-row justify-center align-center gap-10 txt-dec color-white cursor-pointer"
                   >
                     <div>
                       <FaPhone />
