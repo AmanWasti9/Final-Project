@@ -3,16 +3,17 @@ import "./Hero.css";
 import forum from "../../Images/forum.jpg";
 import one from "../../Images/one.jpg";
 import url from "../../Images/url.jpg";
-// import three from "../../Images/three.png";
 import { Alert, Box, Snackbar, TextField } from "@mui/material";
 import { firestore } from "../../firebase";
 import { doc, setDoc } from "firebase/firestore";
 import ImageSlider from "../ImageSlider/ImageSlider";
+import Card from "../Card/card";
 
 export default function Hero() {
   const [email, setEmail] = useState("");
   const [snackbarMessage, setSnackbarMessage] = useState("");
   const [snackbarOpen, setSnackbarOpen] = useState(false);
+  const [showCard, setShowCard] = useState(false); // New state for showing Card
 
   const handleJoin = async (e) => {
     e.preventDefault();
@@ -28,6 +29,7 @@ export default function Hero() {
       // Delay the Snackbar closing to show the message
       setTimeout(() => {
         setSnackbarOpen(false);
+        setShowCard(true); // Show the Card component after snackbar closes
       }, 3000);
     } catch (error) {
       console.log(error.message);
@@ -36,27 +38,21 @@ export default function Hero() {
     }
   };
 
-  const slides = [
-    { url: one, title: "Image One" },
-    { url: url, title: "Image Two" },
-    { url: forum, title: "Image Three" },
-  ];
-
-  const containerStyles = {
-    width: "100%",
-    height: "300px",
-    margin: "10px auto",
-  };
-
   return (
     <div>
       <section className="hero">
         <div className="hero-content">
-         <span className="hero-info"> <span className="hero-title">Cogni,</span> Revolutionizing The Study Plan. </span> 
-          <p className="hero-description text-font" >
-Tired of sifting through endless articles or scrolling through Wikipedia pages to find the information you need?
-We get it—it's frustrating. That's why we created Cogni!
+          <span className="hero-info">
+            {" "}
+            <span className="hero-title">Cogni,</span> Revolutionizing The Study
+            Plan.{" "}
+          </span>
+          <p className="hero-description text-font">
+            Tired of sifting through endless articles or scrolling through
+            Wikipedia pages to find the information you need? We get it—it's
+            frustrating. That's why we created Cogni!
           </p>
+
           <Box
             className="fluid-gradient"
             component="form"
@@ -108,11 +104,12 @@ We get it—it's frustrating. That's why we created Cogni!
             </button>
           </Box>
         </div>
-        {/* <div className="hero-image">
-          <img src={hero} alt="Research tool" />
-        </div> */}
-        <div style={containerStyles}>
-          <ImageSlider slides={slides} />
+
+        <div>
+          <div style={{ height: "100vh", width: "100vh" }}>
+            {/* Conditionally render the Card component */}
+            {showCard && <Card />}
+          </div>
         </div>
 
         <Snackbar
@@ -132,9 +129,6 @@ We get it—it's frustrating. That's why we created Cogni!
           </Alert>
         </Snackbar>
       </section>
-      {/* <div style={containerStyles}>
-        <ImageSlider slides={slides} />
-      </div> */}
     </div>
   );
 }

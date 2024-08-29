@@ -16,9 +16,9 @@
 
 .hero-title {
   font-size: 3rem;
-    font-family: "Poppins", sans-serif;
-    font-weight: 600;
-    font-style: normal;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-style: normal;
   color: #5218fa;
 }
 
@@ -65,9 +65,10 @@
 }
 .fluid-gradient {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: start;
-  align-items: center;
+  align-items: start;
+  gap: 10px;
 }
 /* Media Query for screens less than 768px */
 @media (max-width: 768px) {

@@ -3,6 +3,7 @@ import Hero from "../components/Hero/Hero";
 import Features from "../components/Features/Features";
 import { Container } from "@mui/material";
 import About from "../components/About/About";
+import FeatSlider from "../components/FeatSlider/FeatSlider";
 // import Signup from "../components/Signup/form";
 
 export default function HomePage() {
@@ -14,6 +15,7 @@ export default function HomePage() {
       <Features />
       <br />
       <br />
+      {/* <FeatSlider /> */}
     </Container>
   );
 }
