@@ -31,7 +31,7 @@ function BadgeTexture(user) {
           <group position={[0, 0.5, 0]}>
             <Center bottom={[10]}>
             <mesh position={[2.8, -3.5, 0]} rotation={[0,0,Math.PI]}>
-              <planeGeometry args={[4, 4]} />
+              <planeGeometry args={[5, 4]} />
               <meshBasicMaterial map={texture} />
             </mesh>
             </Center>
