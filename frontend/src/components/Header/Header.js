@@ -33,10 +33,9 @@ export default function Header() {
                   margin: "0 5px",
                 }}
               >
-                <IoHome />
               </div>
               <div>
-                <p>Home</p>
+                <p className="header-font">Home</p>
               </div>
             </Link>
           </span>
@@ -60,10 +59,9 @@ export default function Header() {
                   margin: "0 5px",
                 }}
               >
-                <MdFeaturedPlayList />
               </div>
               <div>
-                <p>Features</p>
+                <p className="header-font">Features</p>
               </div>
             </ScrollLink>
           </span>
@@ -109,10 +107,9 @@ export default function Header() {
                   margin: "0 5px",
                 }}
               >
-                <FaPhone />
               </div>
               <div>
-                <p>Contact</p>
+                <p className="header-font">Contact Us</p>
               </div>
             </ScrollLink>
           </span>
@@ -148,16 +145,8 @@ export default function Header() {
                     to="/"
                     className="flex-row justify-center align-center gap-10 txt-dec color-white"
                   >
-                    <div
-                      className="flex-row align-center"
-                      style={{
-                        margin: "0 5px",
-                      }}
-                    >
-                      <IoHome />
-                    </div>
                     <div>
-                      <p>Home</p>
+                      <p className="header-font">Home</p>
                     </div>
                   </Link>
                 </span>
@@ -171,16 +160,8 @@ export default function Header() {
                     duration={1000}
                     className="flex-row justify-center align-center gap-10 txt-dec color-white cursor-pointer"
                   >
-                    <div
-                      className="flex-row align-center"
-                      style={{
-                        margin: "0 5px",
-                      }}
-                    >
-                      <MdFeaturedPlayList />
-                    </div>
                     <div>
-                      <p>Features</p>
+                      <p className="header-font">Features</p>
                     </div>
                   </ScrollLink>
                 </span>
@@ -212,16 +193,8 @@ export default function Header() {
                     duration={1000}
                     className="flex-row justify-center align-center gap-10 txt-dec color-white cursor-pointer"
                   >
-                    <div
-                      className="flex-row align-center"
-                      style={{
-                        margin: "0 5px",
-                      }}
-                    >
-                      <FaPhone />
-                    </div>
                     <div>
-                      <p>Contact</p>
+                      <p className="header-font">Contact Us</p>
                     </div>
                   </ScrollLink>
                 </span>

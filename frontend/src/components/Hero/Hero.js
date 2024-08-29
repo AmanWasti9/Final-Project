@@ -52,9 +52,8 @@ export default function Hero() {
     <div>
       <section className="hero">
         <div className="hero-content">
-          <span className="hero-title">Cogni,</span> 
-          <span className="hero-info">Revolutionizing The Study Plan.</span>
-          <p className="hero-description">
+         <span className="hero-info"> <span className="hero-title">Cogni,</span> Revolutionizing The Study Plan. </span> 
+          <p className="hero-description text-font" >
 Tired of sifting through endless articles or scrolling through Wikipedia pages to find the information you need?
 We get it—it's frustrating. That's why we created Cogni!
           </p>
