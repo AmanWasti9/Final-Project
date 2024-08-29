@@ -1,12 +1,8 @@
 import React, { useState } from "react";
 import "./Hero.css";
-import forum from "../../Images/forum.jpg";
-import one from "../../Images/one.jpg";
-import url from "../../Images/url.jpg";
 import { Alert, Box, Snackbar, TextField } from "@mui/material";
 import { firestore } from "../../firebase";
 import { doc, setDoc } from "firebase/firestore";
-import ImageSlider from "../ImageSlider/ImageSlider";
 import Card from "../Card/card";
 
 export default function Hero() {
@@ -65,28 +61,33 @@ export default function Hero() {
               placeholder="Enter Your Email"
               sx={{
                 "& .MuiOutlinedInput-root": {
+                  position: "relative",
+                  "&:before": {
+                    content: '""',
+                    position: "absolute",
+                    top: 0,
+                    left: 0,
+                    right: 0,
+                    bottom: 0,
+                    borderRadius: "4px",
+                    padding: "2px",
+                    background: "linear-gradient(to bottom, #e848e5, #5218fa)",
+                    WebkitMask:
+                      "linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)",
+                    mask: "linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)",
+                    WebkitMaskComposite: "xor",
+                    maskComposite: "exclude",
+                  },
                   "& fieldset": {
-                    borderColor: "#5218fa",
+                    borderColor: "transparent",
                   },
                   "&:hover fieldset": {
-                    borderColor: "#5218fa",
+                    borderColor: "transparent",
                   },
                   "&.Mui-focused fieldset": {
-                    borderColor: "#5218fa",
+                    borderColor: "transparent",
                   },
                   color: "white",
-                },
-                "& .MuiInputLabel-root": {
-                  color: "#5218fa",
-                  fontFamily: '"Merriweather", serif',
-                  fontWeight: "300",
-                  fontStyle: "normal",
-                },
-                "& .MuiInputLabel-root.Mui-focused": {
-                  color: "white",
-                  fontFamily: '"Merriweather", serif',
-                  fontWeight: "300",
-                  fontStyle: "normal",
                 },
                 "& .MuiOutlinedInput-input": {
                   color: "white",

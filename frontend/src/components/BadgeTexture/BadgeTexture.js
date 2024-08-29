@@ -3,14 +3,14 @@ import { PerspectiveCamera, Center, Text3D, Resize } from "@react-three/drei";
 import * as THREE from "three";
 import { useLoader } from "@react-three/fiber";
 
-function BadgeTexture() {
+function BadgeTexture(user) {
   // Define your variables here
   const planeWidth = 4; // Example value
   const textureAspect = 1.5; // Example value
   const resizeId = "uniqueId123"; // Example unique ID
 
   // Load the texture using useLoader
-  const texture = useLoader(THREE.TextureLoader, "/assets_incase/logo.png");
+  const texture = useLoader(THREE.TextureLoader, "/assets_incase/logo-flip.png");
 
   return (
     <>
@@ -27,35 +27,49 @@ function BadgeTexture() {
       </mesh>
 
       <Center>
-        <Resize key={resizeId} maxHeight={0.45} maxWidth={0.925}>
+        <Resize key={resizeId} maxHeight={0.45} maxWidth={0.800}>
           <group position={[0, 0.5, 0]}>
-            <mesh position={[2.5, -2, 0]}>
-              <planeGeometry args={[2, 1]} />
+            <Center bottom={[10]}>
+            <mesh position={[2.8, -3.5, 0]} rotation={[0,0,Math.PI]}>
+              <planeGeometry args={[4, 4]} />
               <meshBasicMaterial map={texture} />
             </mesh>
+            </Center>
+            <Center top={[10]}>
             <Text3D
               bevelEnabled={false}
               bevelSize={0}
-              font="/assets_incase/gt.json"
-              height={0.1}
-              scale={[0.9, 1, 0.9]}
-              position={[0, 1, 0]}
-              rotation={[0, Math.PI, Math.PI]}
-              color="purple"
-            >
-              {"Cogni"}
-            </Text3D>
-            <Text3D
-              bevelEnabled={false}
-              bevelSize={0}
-              font="/assets_incase/gt.json"
+              font="/assets_incase/poppins-bold.json"
               height={0.1}
               scale={[0.7, 1, 0.7]}
-              position={[0, 2, 0]}
+              position={[0, 0.3, 0]}  // Adjust Y position
               rotation={[0, Math.PI, Math.PI]}
             >
-              {"Thank you"}
+              {user.firstName}
             </Text3D>
+            <Text3D
+              bevelEnabled={false}
+              bevelSize={0}
+              font="/assets_incase/poppins-bold.json"
+              height={0.1}
+              scale={[0.7, 1, 0.7]}
+              position={[0, 1.8, 0]}  // Adjust Y position
+              rotation={[0, Math.PI, Math.PI]}
+            >
+              {user.lastName}
+            </Text3D>
+            <Text3D
+              bevelEnabled={false}
+              bevelSize={0}
+              font="/assets_incase/poppins-bold.json"
+              height={0.1}
+              scale={[0.7, 1, 0.7]}
+              position={[0, 3.2, 0]}  // Adjust Y position
+              rotation={[0, Math.PI, Math.PI]}
+            >
+              {"Has Joined"}
+            </Text3D>
+            </Center>
           </group>
         </Resize>
       </Center>

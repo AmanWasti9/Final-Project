@@ -407,7 +407,7 @@ function Band({ maxSpeed = 30, minSpeed = 10 }) {
                 roughness={0.3}
               >
                 <RenderTexture attach="map" height={2000} width={2000}>
-                  <BadgeTexture />
+                <BadgeTexture firstName= "Mirza" lastName= "Asfandyar" />
                 </RenderTexture>
               </meshPhysicalMaterial>
             </mesh>

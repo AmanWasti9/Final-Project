@@ -1,57 +1,91 @@
-/* src/components/FeatSlider.css */
-.scroll-slider {
-  height: 300vh; /* Ensure there's enough space to scroll and trigger animations */
-  position: relative;
-  background-color: black;
+:root {
+  --cards: 4;
+  --cardHeight: 87vh;
+  --cardTopPadding: 1.5em;
+  --cardMargin: 4vw;
 }
 
-.slider-content {
-  text-align: center;
-  padding: 20px;
-  position: fixed; /* Fixed header for initial content */
-  top: 0;
-  width: 100%;
-  background-color: white; /* Adjust as needed */
-  z-index: 1000; /* Ensure it's above sections */
+.container {
+  width: 90%;
+  margin: 0 auto;
 }
 
-.section {
-  position: absolute;
+#cards {
+  list-style: none;
+  padding-left: 0;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(var(--cards), var(--cardHeight));
+  gap: var(--cardMargin);
+  padding-bottom: calc(var(--cards) * var(--cardTopPadding));
+  margin-bottom: var(--cardMargin);
+}
+
+#card1 {
+  --index: 1;
+}
+#card2 {
+  --index: 2;
+}
+#card3 {
+  --index: 3;
+}
+#card4 {
+  --index: 4;
+}
+
+.card {
+  position: sticky;
   top: 0;
-  left: 0;
-  width: 100%;
-  height: 80vh;
+  padding-top: calc(var(--index) * var(--cardTopPadding));
+}
+
+.card-body {
+  box-sizing: border-box;
+  padding: 30px;
+  border-radius: 50px;
+  height: var(--cardHeight);
   display: flex;
+  justify-content: space-between;
   align-items: center;
+  transition: all 0.5s;
+  background-color: #0c0c0c;
+  border: 3px solid transparent;
+  background-origin: border-box;
+  background-clip: padding-box, border-box;
+  background-image: linear-gradient(#0c0c0c, #0c0c0c), linear-gradient(to bottom, #e848e5, #5218fa);
+}
+
+.card-div2 {
+  width: 50%;
+  height: 100%;
+  display: flex;
   justify-content: center;
-  opacity: 0;
-  transform: translateY(80vh); /* Start off-screen at the bottom */
-  transition: opacity 0.6s ease, transform 0.6s ease;
-  z-index: 1; /* Ensure sections overlap each other */
+  align-items: center;
+  padding: 20px;
 }
 
-.section.visible {
-  opacity: 1;
-  transform: translateY(0); /* Slide into view */
+.card-div1 {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  padding: 20px;
+  color: white;
 }
 
-/* Unique background styles for each section */
-/* .section-1 {
-  background-color: #f8b400; 
+.b-r-rad {
+  border-top-right-radius: 30px;
+  border-bottom-right-radius: 30px;
 }
 
-.section-2 {
-  background-color: #34a853; 
+.b-l-rad {
+  border-top-left-radius: 30px;
+  border-bottom-left-radius: 30px;
 }
-
-.section-3 {
-  background-color: #4285f4; 
-} */
 
 h2 {
-  margin-bottom: 1rem;
-}
-
-p {
-  font-size: 1.2rem;
+  font-size: 2.5em;
 }

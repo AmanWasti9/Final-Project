@@ -9,11 +9,12 @@ export default function Footer() {
         <hr />
         <br />
 
-        <p className="text-center">
-          Contact us on Our LinkedIn
+        <p className="text-center foot-font">
+          Made by Team A<sup>3</sup>™
           <br />
+          &copy; 2024 All rights reserved.
         </p>
-        <p className="text-center">
+        <p className="text-center foot-font">
           <a
             href="https://www.linkedin.com/in/aman-wasti/"
             target="_blank"
