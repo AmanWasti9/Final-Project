@@ -12,7 +12,6 @@ export default function HomePage() {
       <Hero />
       <br />
       <br />
-
       <FeatSlider />
       <br />
       <br />

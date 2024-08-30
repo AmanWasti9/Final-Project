@@ -73,13 +73,13 @@ export default function Header() {
             </ScrollLink>
           </span>
 
-          {/* <span
+          <span
             style={{
               margin: "10px 0",
             }}
           >
-            <ScrollLink
-              to="about"
+            <Link
+              to="/about"
               spy={true}
               smooth={true}
               offset={-20}
@@ -92,8 +92,8 @@ export default function Header() {
               <div>
                 <p>About</p>
               </div>
-            </ScrollLink>
-          </span> */}
+            </Link>
+          </span>
 
           <span
             style={{
@@ -177,8 +177,8 @@ export default function Header() {
                 </span>
 
                 {/* <span>
-                  <ScrollLink
-                    to="about"
+                  <Link
+                    to="/about"
                     spy={true}
                     smooth={true}
                     offset={-20}
@@ -186,12 +186,9 @@ export default function Header() {
                     className="flex-row justify-center align-center gap-10 txt-dec color-white cursor-pointer"
                   >
                     <div>
-                      <FaUser />
+                      <p className="header-font">About</p>
                     </div>
-                    <div>
-                      <p>About</p>
-                    </div>
-                  </ScrollLink>
+                  </Link>
                 </span> */}
 
                 <span>
