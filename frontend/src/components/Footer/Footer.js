@@ -4,7 +4,12 @@ import { Container } from "@mui/material";
 
 export default function Footer() {
   return (
-    <div id="footer">
+    <div
+      id="footer"
+      style={{
+        marginTop: "100px",
+      }}
+    >
       <Container>
         <hr />
         <br />

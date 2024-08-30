@@ -1,6 +1,12 @@
 import React, { useState } from "react";
 import "./Hero.css";
-import { Alert, Box, Snackbar, TextField } from "@mui/material";
+import {
+  Alert,
+  Box,
+  Snackbar,
+  TextField,
+  CircularProgress,
+} from "@mui/material";
 import { firestore } from "../../firebase";
 import { doc, setDoc } from "firebase/firestore";
 import Card from "../Card/card";
@@ -9,7 +15,8 @@ export default function Hero() {
   const [email, setEmail] = useState("");
   const [snackbarMessage, setSnackbarMessage] = useState("");
   const [snackbarOpen, setSnackbarOpen] = useState(false);
-  const [showCard, setShowCard] = useState(false); // New state for showing Card
+  const [showCard, setShowCard] = useState(false);
+  const [loading, setLoading] = useState(false); // New state for loading
 
   const handleJoin = async (e) => {
     e.preventDefault();
@@ -25,7 +32,13 @@ export default function Hero() {
       // Delay the Snackbar closing to show the message
       setTimeout(() => {
         setSnackbarOpen(false);
-        setShowCard(true); // Show the Card component after snackbar closes
+        setLoading(true); // Start the loader before showing the card
+
+        // Simulate a delay for the card to load
+        setTimeout(() => {
+          setLoading(false);
+          setShowCard(true); // Show the Card component after loader
+        }, 2000); // Adjust the delay as needed
       }, 3000);
     } catch (error) {
       console.log(error.message);
@@ -103,16 +116,18 @@ export default function Hero() {
               }}
             />
             <button className="hero-button" type="submit">
-              Join
+              Join our waitlist
             </button>
           </Box>
         </div>
 
-        <div>
-          <div style={{ height: "100vh", width: "100vh" }}>
-            {/* Conditionally render the Card component */}
-            {showCard && <Card />}
-          </div>
+        <div className="loader-container">
+          {/* Conditionally render the loader or the Card component */}
+          {loading ? (
+            <CircularProgress color="secondary" />
+          ) : (
+            showCard && <Card />
+          )}
         </div>
 
         <Snackbar

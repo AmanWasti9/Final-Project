@@ -28,9 +28,13 @@ export default function Header() {
               margin: "10px 0",
             }}
           >
-            <Link
-              to="/"
-              className="flex-row align-center gap-10 txt-dec color-white"
+            <ScrollLink
+              to="home"
+              spy={true}
+              smooth={true}
+              offset={-20}
+              duration={1000}
+              className="flex-row align-center gap-10 txt-dec color-white cursor-pointer"
             >
               <div
                 className="flex-row align-center"
@@ -41,7 +45,7 @@ export default function Header() {
               <div>
                 <p className="header-font">Home</p>
               </div>
-            </Link>
+            </ScrollLink>
           </span>
 
           <span
@@ -143,14 +147,18 @@ export default function Header() {
             <div>
               <div className="Nav__Links">
                 <span>
-                  <Link
-                    to="/"
-                    className="flex-row justify-center align-center gap-10 txt-dec color-white"
+                  <ScrollLink
+                    to="home"
+                    spy={true}
+                    smooth={true}
+                    offset={-20}
+                    duration={1000}
+                    className="flex-row justify-center align-center gap-10 txt-dec color-white cursor-pointer"
                   >
                     <div>
                       <p className="header-font">Home</p>
                     </div>
-                  </Link>
+                  </ScrollLink>
                 </span>
 
                 <span>

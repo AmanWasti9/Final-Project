@@ -19,6 +19,8 @@ function App() {
         </main>
         <br />
         <br />
+        <br />
+        <br />
         <footer>
           <Footer />
         </footer>

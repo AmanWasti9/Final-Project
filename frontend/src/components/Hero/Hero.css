@@ -71,6 +71,13 @@
   background: linear-gradient(to bottom, #5218fa, #e848e5);
   color: #fff;
 }
+.loader-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+}
 
 /* Media Query for screens less than 768px */
 @media (max-width: 768px) {

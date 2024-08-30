@@ -40,7 +40,7 @@ const NewHero = () => {
   };
 
   return (
-    <div className="container_nh">
+    <div className="container_nh" id="home">
       <ul id="cards_nh">
         <li className="card_nh" id="card1_nh">
           <div className="card_body_nh">
