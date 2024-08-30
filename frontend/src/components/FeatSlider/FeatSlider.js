@@ -8,10 +8,10 @@ import hero from "../../Images/hero.jpg";
 
 const FeatSlider = () => {
   return (
-    <div class="container">
+    <div className="container">
       <ul id="cards">
-        <li class="card" id="card1">
-          <div class="card-body">
+        <li className="card" id="card1">
+          <div className="card-body">
             <div className="card-div1 b-l-rad ">
               <h2 className="header-font">Quick Scan & Summarize </h2>
               <br />
@@ -33,8 +33,8 @@ const FeatSlider = () => {
             </div>
           </div>
         </li>
-        <li class="card" id="card2">
-          <div class="card-body">
+        <li className="card" id="card2">
+          <div className="card-body">
             <div className="card-div2 b-l-rad">
               <img
                 src={forum}
@@ -57,8 +57,8 @@ const FeatSlider = () => {
             </div>
           </div>
         </li>
-        <li class="card" id="card3">
-          <div class="card-body">
+        <li className="card" id="card3">
+          <div className="card-body">
             <div className="card-div1 b-l-rad">
               <h2 className="header-font">Engage & Exchange Ideas</h2>
               <br />
@@ -80,8 +80,8 @@ const FeatSlider = () => {
             </div>
           </div>
         </li>
-        <li class="card" id="card4">
-          <div class="card-body">
+        <li className="card" id="card4">
+          <div className="card-body">
             <div className="card-div2 b-l-rad">
               <img
                 src={hero}

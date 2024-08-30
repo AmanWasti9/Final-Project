@@ -1,11 +1,11 @@
 .Nav__Main {
-  background: transparent;
+  background: #0c0c0c;
   color: white;
   /* border-bottom: solid 1px black; */
   padding-top: 10px;
   padding-left: 10px;
   padding-right: 10px;
-  position: relative;
+  position: fixed;
   top: 0;
   left: 0;
   right: 0;

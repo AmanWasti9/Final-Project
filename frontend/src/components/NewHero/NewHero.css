@@ -1,7 +1,7 @@
 :root {
-  --cards: 5;
-  --cardHeight: 80vh;
-  --cardTopPadding: 1.5em;
+  --cards: 4;
+  --cardHeight: 75vh;
+  --cardTopPadding: 0.5em;
   --cardMargin: 1vw;
 }
 
@@ -30,9 +30,6 @@
 #card3 {
   --index: 3;
 }
-#card4 {
-  --index: 4;
-}
 
 .card {
   position: sticky;
@@ -40,51 +37,27 @@
   padding-top: calc(var(--index) * var(--cardTopPadding));
 }
 
-.card-body {
+.card_body {
   box-sizing: border-box;
-  padding: 30px;
-  border-radius: 50px;
+  /* border-radius: 50px; */
   height: var(--cardHeight);
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  transition: all 0.5s;
-  background-color: #0c0c0c;
-  border: 3px solid transparent;
-  background-origin: border-box;
-  background-clip: padding-box, border-box;
-  background-image: linear-gradient(#0c0c0c, #0c0c0c),
-    linear-gradient(to bottom, #e848e5, #5218fa);
-}
-
-.card-div2 {
-  width: 50%;
-  height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 20px;
+  transition: all 0.5s;
+  background-color: #0c0c0c;
+  border: none;
+  margin: 50px 0;
 }
 
-.card-div1 {
-  width: 50%;
+.card_div1 {
+  width: 100%;
   height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: start;
-  padding: 20px;
+  align-items: center;
   color: white;
-}
-
-.b-r-rad {
-  border-top-right-radius: 30px;
-  border-bottom-right-radius: 30px;
-}
-
-.b-l-rad {
-  border-top-left-radius: 30px;
-  border-bottom-left-radius: 30px;
 }
 
 h2 {
