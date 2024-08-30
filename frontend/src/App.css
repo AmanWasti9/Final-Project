@@ -4,6 +4,7 @@ body {
   /* background: linear-gradient(to bottom right, rgb(65, 64, 64), black); */
   background: #0c0c0c;
   color: #ffffff;
+  overflow-x: hidden;
 }
 * {
   padding: 0;

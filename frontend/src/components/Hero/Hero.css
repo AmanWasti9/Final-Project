@@ -37,23 +37,6 @@
   margin-bottom: 30px;
 }
 
-.hero-button {
-  padding: 15px 40px;
-  font-size: 1rem;
-  font-weight: bold;
-  color: #fff;
-  background: linear-gradient(to bottom, #e848e5, #5218fa);
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background 0.3s ease, color 0.3s ease;
-}
-
-.hero-button:hover {
-  background: #5218fa;
-  color: #fff;
-}
-
 .hero-image {
   width: 50%;
 }
@@ -71,6 +54,24 @@
   align-items: start;
   gap: 10px;
 }
+
+.hero-button {
+  padding: 15px 40px;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #fff;
+  background: linear-gradient(to bottom, #e848e5, #5218fa);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease, color 0.3s ease;
+  width: 300px;
+}
+.hero-button:hover {
+  background: linear-gradient(to bottom, #5218fa, #e848e5);
+  color: #fff;
+}
+
 /* Media Query for screens less than 768px */
 @media (max-width: 768px) {
   .fluid-gradient {

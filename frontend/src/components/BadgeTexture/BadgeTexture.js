@@ -10,7 +10,10 @@ function BadgeTexture(user) {
   const resizeId = "uniqueId123"; // Example unique ID
 
   // Load the texture using useLoader
-  const texture = useLoader(THREE.TextureLoader, "/assets_incase/logo-flip.png");
+  const texture = useLoader(
+    THREE.TextureLoader,
+    "/assets_incase/logo-flip.png"
+  );
 
   return (
     <>
@@ -27,48 +30,46 @@ function BadgeTexture(user) {
       </mesh>
 
       <Center>
-        <Resize key={resizeId} maxHeight={0.45} maxWidth={0.800}>
+        <Resize key={resizeId} maxHeight={0.45} maxWidth={0.8}>
           <group position={[0, 0.5, 0]}>
-            <Center bottom={[10]}>
-            <mesh position={[2.8, -3.5, 0]} rotation={[0,0,Math.PI]}>
+            <mesh position={[0, -3, 0]} rotation={[0, 0, Math.PI]}>
               <planeGeometry args={[5, 4]} />
               <meshBasicMaterial map={texture} />
             </mesh>
-            </Center>
             <Center top={[10]}>
-            <Text3D
-              bevelEnabled={false}
-              bevelSize={0}
-              font="/assets_incase/poppins-bold.json"
-              height={0.1}
-              scale={[0.7, 1, 0.7]}
-              position={[0, 0.3, 0]}  // Adjust Y position
-              rotation={[0, Math.PI, Math.PI]}
-            >
-              {user.firstName}
-            </Text3D>
-            <Text3D
-              bevelEnabled={false}
-              bevelSize={0}
-              font="/assets_incase/poppins-bold.json"
-              height={0.1}
-              scale={[0.7, 1, 0.7]}
-              position={[0, 1.8, 0]}  // Adjust Y position
-              rotation={[0, Math.PI, Math.PI]}
-            >
-              {user.lastName}
-            </Text3D>
-            <Text3D
-              bevelEnabled={false}
-              bevelSize={0}
-              font="/assets_incase/poppins-bold.json"
-              height={0.1}
-              scale={[0.7, 1, 0.7]}
-              position={[0, 3.2, 0]}  // Adjust Y position
-              rotation={[0, Math.PI, Math.PI]}
-            >
-              {"Has Joined"}
-            </Text3D>
+              <Text3D
+                bevelEnabled={false}
+                bevelSize={0}
+                font="/assets_incase/poppins-bold.json"
+                height={0.1}
+                scale={[0.7, 1, 0.7]}
+                position={[0, 0.3, 0]} // Adjust Y position
+                rotation={[0, Math.PI, Math.PI]}
+              >
+                {"Thank you"}
+              </Text3D>
+              <Text3D
+                bevelEnabled={false}
+                bevelSize={0}
+                font="/assets_incase/poppins-bold.json"
+                height={0.1}
+                scale={[0.7, 1, 0.7]}
+                position={[2, 1.8, 0]} // Adjust Y position
+                rotation={[0, Math.PI, Math.PI]}
+              >
+                {"for"}
+              </Text3D>
+              <Text3D
+                bevelEnabled={false}
+                bevelSize={0}
+                font="/assets_incase/poppins-bold.json"
+                height={0.1}
+                scale={[0.7, 1, 0.7]}
+                position={[0, 3.2, 0]} // Adjust Y position
+                rotation={[0, Math.PI, Math.PI]}
+              >
+                {"joining us!"}
+              </Text3D>
             </Center>
           </group>
         </Resize>

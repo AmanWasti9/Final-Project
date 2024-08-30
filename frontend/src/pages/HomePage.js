@@ -9,12 +9,10 @@ export default function HomePage() {
   return (
     <Container>
       <NewHero />
-      {/* <Hero /> */}
+      <Hero />
       <br />
       <br />
-      <h2 className="header-font">Features Heading Asfand Yahan Likh Lena</h2>
-      <br />
-      <br />
+
       <FeatSlider />
       <br />
       <br />

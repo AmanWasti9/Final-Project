@@ -10,9 +10,17 @@ export default function Footer() {
         <br />
 
         <p className="text-center foot-font">
-          Made by Team A<sup>3</sup>™
-          <br />
-          &copy; 2024 All rights reserved.
+          Made by Team A<sup>3</sup> &copy;{" "}
+          <span
+            style={{
+              background: "linear-gradient(to bottom, #e848e5, #5218fa)",
+              WebkitBackgroundClip: "text",
+              WebkitTextFillColor: "transparent",
+            }}
+          >
+            Cogni
+          </span>{" "}
+          . 2024
         </p>
         <p className="text-center foot-font">
           <a

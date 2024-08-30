@@ -15,7 +15,12 @@ export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const MenuContent = (
-    <div className="Nav__Menu__Content__Main">
+    <div
+      className="Nav__Menu__Content__Main"
+      style={{
+        marginBottom: "150px",
+      }}
+    >
       <Container style={{ margin: "10px 0" }}>
         <div className="Nav__Menu__Content flex-column color-white">
           <span
@@ -32,8 +37,7 @@ export default function Header() {
                 style={{
                   margin: "0 5px",
                 }}
-              >
-              </div>
+              ></div>
               <div>
                 <p className="header-font">Home</p>
               </div>
@@ -58,8 +62,7 @@ export default function Header() {
                 style={{
                   margin: "0 5px",
                 }}
-              >
-              </div>
+              ></div>
               <div>
                 <p className="header-font">Features</p>
               </div>
@@ -106,8 +109,7 @@ export default function Header() {
                 style={{
                   margin: "0 5px",
                 }}
-              >
-              </div>
+              ></div>
               <div>
                 <p className="header-font">Contact Us</p>
               </div>

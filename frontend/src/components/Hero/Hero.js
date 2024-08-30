@@ -38,16 +38,17 @@ export default function Hero() {
     <div>
       <section className="hero">
         <div className="hero-content">
-          <span className="hero-info">
-            {" "}
-            <span className="hero-title">Cogni,</span> Revolutionizing The Study
-            Plan.{" "}
-          </span>
-          <p className="hero-description text-font">
-            Tired of sifting through endless articles or scrolling through
-            Wikipedia pages to find the information you need? We get it—it's
-            frustrating. That's why we created Cogni!
-          </p>
+          <h2
+            className="header-font text-center"
+            style={{
+              background: "linear-gradient(to bottom, #e848e5, #5218fa)",
+              WebkitBackgroundClip: "text",
+              WebkitTextFillColor: "transparent",
+              fontSize: "6rem",
+            }}
+          >
+            Cogni
+          </h2>
 
           <Box
             className="fluid-gradient"
@@ -62,6 +63,7 @@ export default function Hero() {
               sx={{
                 "& .MuiOutlinedInput-root": {
                   position: "relative",
+                  width: "300px",
                   "&:before": {
                     content: '""',
                     position: "absolute",

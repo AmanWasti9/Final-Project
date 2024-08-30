@@ -1,13 +1,17 @@
 :root {
   --cards: 5;
-  --cardHeight: 80vh;
+  --cardHeight: 70vh;
   --cardTopPadding: 1.5em;
   --cardMargin: 1vw;
 }
 
 .container {
-  width: 90%;
+  width: 70vw;
   margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
 }
 
 #cards {
@@ -18,7 +22,7 @@
   grid-template-rows: repeat(var(--cards), var(--cardHeight));
   gap: var(--cardMargin);
   padding-bottom: calc(var(--cards) * var(--cardTopPadding));
-  margin-bottom: var(--cardMargin);
+  margin-bottom: 100px;
 }
 
 #card1 {
@@ -43,9 +47,11 @@
 .card-body {
   box-sizing: border-box;
   padding: 30px;
+  margin: 150px 0;
   border-radius: 50px;
   height: var(--cardHeight);
   display: flex;
+  flex-direction: row;
   justify-content: space-between;
   align-items: center;
   transition: all 0.5s;
@@ -89,4 +95,23 @@
 
 h2 {
   font-size: 2.5em;
+}
+.fs_img {
+  width: 90%;
+}
+
+@media (max-width: 600px) {
+  .card-body {
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    padding: 0px;
+  }
+  .card-div2,
+  .card-div1 {
+    width: 90%;
+  }
+  .fs_img {
+    width: 50%;
+  }
 }
