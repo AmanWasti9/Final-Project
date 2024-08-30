@@ -26,11 +26,13 @@ const FeatSlider = () => {
                 <h2
                   className="header-font"
                   style={{
-                    fontSize: "clamp(18px, 20px, 30px)",
+                    fontSize: "clamp(18px, 30px, 40px)",
                   }}
                 >
                   Quick Scan & Summarize{" "}
                 </h2>
+                <br />
+
                 <p className="text-font">
                   Instantly scan URLs to extract key information and get concise
                   summaries. Whether it's a lengthy article or a detailed
@@ -53,11 +55,12 @@ const FeatSlider = () => {
                 <h2
                   className="header-font"
                   style={{
-                    fontSize: "clamp(18px, 20px, 30px)",
+                    fontSize: "clamp(18px, 30px, 40px)",
                   }}
                 >
                   PDFs Simplified
                 </h2>
+                <br />
                 <p className="text-font">
                   Upload your PDFs and let Cogni do the heavy lifting. Our
                   advanced summarization tool condenses lengthy documents into
@@ -73,11 +76,13 @@ const FeatSlider = () => {
                 <h2
                   className="header-font"
                   style={{
-                    fontSize: "clamp(18px, 20px, 30px)",
+                    fontSize: "clamp(18px, 30px, 40px)",
                   }}
                 >
                   Engage & Exchange Ideas
                 </h2>
+                <br />
+
                 <p className="text-font">
                   Join a vibrant community of learners and thinkers. Share
                   insights, ask questions, and participate in discussions that
@@ -93,17 +98,25 @@ const FeatSlider = () => {
           <li className="card" id="card4">
             <div className="card-body">
               <div className="card-div2 b-l-rad">
-                <img src={hero} alt="" className="fs_img" />
+                <img
+                  src={hero}
+                  alt=""
+                  className="fs_img"
+                  style={{
+                    borderRadius: "30px",
+                  }}
+                />
               </div>
               <div className="card-div1 b-r-rad">
                 <h2
                   className="header-font"
                   style={{
-                    fontSize: "clamp(18px, 20px, 30px)",
+                    fontSize: "clamp(18px, 30px, 40px)",
                   }}
                 >
                   Learn with Flashcards
                 </h2>
+                <br />
                 <p className="text-font">
                   Enhance your learning with customized flashcards. Whether
                   you're studying for an exam or mastering a new skill, Cogni's

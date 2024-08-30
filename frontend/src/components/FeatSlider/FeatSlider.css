@@ -106,12 +106,19 @@ h2 {
     justify-content: start;
     align-items: center;
     padding: 0px;
+    height: 500px;
+    margin: 135px 0;
   }
   .card-div2,
   .card-div1 {
     width: 90%;
+    padding: 10px;
   }
   .fs_img {
     width: 50%;
+  }
+
+  .container {
+    width: 90vw;
   }
 }
