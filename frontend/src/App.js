@@ -9,11 +9,11 @@ import AboutPage from "./pages/AboutPage";
 
 function App() {
   return (
-    <div>
+    <div id="top">
       <Router>
         <header>
-          <Header />
-          {/* <Navbar /> */}
+          {/* <Header /> */}
+          <Navbar />
         </header>
         <main>
           <Routes>

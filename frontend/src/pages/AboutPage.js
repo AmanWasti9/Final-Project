@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 
 const About = () => {
   return (
@@ -53,10 +53,10 @@ const About = () => {
 
       <br />
       <br />
+      <br />
 
       <div className="header">
         <h1 className="title">About Us</h1>
-        {/* <div className="subtitle">Amplify Your Mind</div> */}
       </div>
 
       <div className="features">
@@ -111,7 +111,7 @@ const styles = `
     font-family: 'Inter', sans-serif;
     padding: 4rem 2rem;
     max-width: 1200px;
-    margin: 150px auto;
+    margin: 80px auto;
     overflow: hidden;
     position: relative;
   }
@@ -146,8 +146,11 @@ const styles = `
   }
 
   .title {
+    font-optical-sizing: 2;
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-style: normal;
     font-size: 5rem;
-    font-weight: 700;
     margin-bottom: 0.5rem;
     background: linear-gradient(45deg, #e848e5, #5218fa);
     -webkit-background-clip: text;
@@ -225,103 +228,56 @@ const styles = `
   .feature-item h3 {
     font-size: 1.3rem;
     margin-bottom: 1rem;
-    background: linear-gradient(45deg, #e848e5, #5218fa);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    color: #e848e5;
+    z-index: 1;
   }
 
   .feature-item p {
     font-size: 1rem;
     color: #BDBDBD;
-    position: relative;
     z-index: 1;
   }
 
   .cta {
     text-align: center;
+    margin-top: 4rem;
   }
 
   .cta-button {
-    display: inline-block;
     background: linear-gradient(45deg, #e848e5, #5218fa);
     color: #ffffff;
-    padding: 1rem 3rem;
-    text-decoration: none;
-    border-radius: 50px;
-    font-weight: bold;
+    padding: 1rem 2rem;
+    border-radius: 30px;
+    font-size: 1.2rem;
+    font-weight: 600;
     text-transform: uppercase;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    letter-spacing: 2px;
-    font-size: 1.1rem;
-    box-shadow: 0 8px 16px rgba(82, 24, 250, 0.3);
+    text-decoration: none;
+    transition: background 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
   }
 
   .cta-button:hover {
+    background: linear-gradient(45deg, #5218fa, #e848e5);
     transform: translateY(-5px);
-    box-shadow: 0 12px 24px rgba(82, 24, 250, 0.4);
   }
 
-  .about-us {
-    margin-top: 4rem;
-    padding: 2rem;
-    background-color: #1a1a1a;
-    border-radius: 15px;
-    text-align: center;
-  }
-
-  .about-us h2 {
-    font-size: 2rem;
-    margin-bottom: 1rem;
-    color: #e848e5;
-  }
-
-  .team-member {
-    margin-bottom: 2rem;
-  }
-
-  .team-member h3 {
-    font-size: 1.5rem;
-    color: #ffffff;
-  }
-
-  .team-member p {
-    font-size: 1rem;
-    color: #BDBDBD;
-  }
-
-  @media (max-width: 768px) {
-    .about-container {
-      padding: 3rem 1.5rem;
-    }
-
-    .title {
-      font-size: 3rem;
-    }
-
-    .subtitle {
-      font-size: 1.2rem;
-    }
-
-    .content {
-      font-size: 1rem;
-    }
-
-    .features {
-      grid-template-columns: 1fr;
-    }
-
-    .about-us {
-      padding: 1.5rem;
-    }
+  .cta-button:active {
+    transform: translateY(0);
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.3);
   }
 `;
 
-const AboutPage = () => (
-  <>
-    <style>{styles}</style>
-    <About />
-  </>
-);
+const AboutPage = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0); // Scrolls to the top of the page
+  }, []);
+
+  return (
+    <>
+      <style>{styles}</style>
+      <About />
+    </>
+  );
+};
 
 export default AboutPage;

@@ -1,6 +1,7 @@
 import React from "react";
 import "./Footer.css";
 import { Container } from "@mui/material";
+import { Link as ScrollLink } from "react-scroll";
 
 export default function Footer() {
   return (
@@ -8,6 +9,11 @@ export default function Footer() {
       id="footer"
       style={{
         marginTop: "100px",
+        position: "relative",
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "flex-end",
+        paddingBottom: "50px", // Ensure space for the button
       }}
     >
       <Container>

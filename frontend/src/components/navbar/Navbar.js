@@ -1,5 +1,8 @@
 import React, { useState } from "react";
 import "./Navbar.css"; // Import the external CSS file
+import { Link } from "react-router-dom";
+import logo from "../../Images/logo.png";
+import { Link as ScrollLink } from "react-scroll";
 
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -11,24 +14,53 @@ function Navbar() {
   return (
     <nav className="navbar-container">
       <div className="navbar-wrapper">
-        <a href="#" className="navbar-logo">YourLogo</a>
-        <div className={`menu-icon ${isOpen ? "open" : ""}`} onClick={toggleMenu}>
+        <img
+          src={logo}
+          style={{
+            width: "60px",
+          }}
+          alt="Logo"
+        />
+        <div
+          className={`menu-icon ${isOpen ? "open" : ""}`}
+          onClick={toggleMenu}
+        >
           <div className="bar1"></div>
           <div className="bar2"></div>
           <div className="bar3"></div>
         </div>
-        <ul className={`nav-menu ${isOpen ? "active" : ""}`}>
+        <ul className={`text-font nav-menu ${isOpen ? "active" : ""}`}>
           <li className="nav-item">
-            <a href="#" className="nav-link">Home</a>
+            <Link to="/" className="nav-link">
+              Home
+            </Link>
           </li>
           <li className="nav-item">
-            <a href="#" className="nav-link">Features</a>
+            <ScrollLink
+              to="features"
+              spy={true}
+              smooth={true}
+              offset={-20}
+              duration={1000}
+            >
+              <span className="nav-link">Features</span>
+            </ScrollLink>
           </li>
           <li className="nav-item">
-            <a href="#" className="nav-link">Pricing</a>
+            <Link to="/about" className="nav-link">
+              About
+            </Link>
           </li>
           <li className="nav-item">
-            <a href="#" className="nav-link">Contact</a>
+            <ScrollLink
+              to="footer"
+              spy={true}
+              smooth={true}
+              offset={-20}
+              duration={1000}
+            >
+              <span className="nav-link">Contact</span>
+            </ScrollLink>
           </li>
         </ul>
       </div>
