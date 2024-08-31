@@ -28,8 +28,8 @@ export default function Header() {
               margin: "10px 0",
             }}
           >
-            <ScrollLink
-              to="home"
+            <Link
+              to="/"
               spy={true}
               smooth={true}
               offset={-20}
@@ -45,7 +45,7 @@ export default function Header() {
               <div>
                 <p className="header-font">Home</p>
               </div>
-            </ScrollLink>
+            </Link>
           </span>
 
           <span
@@ -86,9 +86,12 @@ export default function Header() {
               duration={1000}
               className="flex-row align-center gap-10 txt-dec color-white cursor-pointer"
             >
-              <div>
-                <FaUser />
-              </div>
+              <div
+                className="flex-row align-center"
+                style={{
+                  margin: "0 5px",
+                }}
+              ></div>
               <div>
                 <p>About</p>
               </div>
@@ -147,8 +150,8 @@ export default function Header() {
             <div>
               <div className="Nav__Links">
                 <span>
-                  <ScrollLink
-                    to="home"
+                  <Link
+                    to="/"
                     spy={true}
                     smooth={true}
                     offset={-20}
@@ -158,7 +161,7 @@ export default function Header() {
                     <div>
                       <p className="header-font">Home</p>
                     </div>
-                  </ScrollLink>
+                  </Link>
                 </span>
 
                 <span>
@@ -176,7 +179,7 @@ export default function Header() {
                   </ScrollLink>
                 </span>
 
-                {/* <span>
+                <span>
                   <Link
                     to="/about"
                     spy={true}
@@ -189,7 +192,7 @@ export default function Header() {
                       <p className="header-font">About</p>
                     </div>
                   </Link>
-                </span> */}
+                </span>
 
                 <span>
                   <ScrollLink

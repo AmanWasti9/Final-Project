@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 
 const About = () => {
   return (
@@ -9,24 +9,35 @@ const About = () => {
       </div>
       <div className="content">
         <p>
-          Welcome to Cogni, where cutting-edge AI meets human potential. Our revolutionary platform is designed to elevate your cognitive abilities, transforming the way you think, learn, and create.
+          Welcome to Cogni, where cutting-edge AI meets human potential. Our
+          revolutionary platform is designed to elevate your cognitive
+          abilities, transforming the way you think, learn, and create.
         </p>
       </div>
       <div className="features">
         <div className="feature-item">
           <div className="feature-icon">🧠</div>
           <h3>AI-Powered Assistance</h3>
-          <p>Harness the power of advanced AI to boost your problem-solving skills and creative thinking.</p>
+          <p>
+            Harness the power of advanced AI to boost your problem-solving
+            skills and creative thinking.
+          </p>
         </div>
         <div className="feature-item">
           <div className="feature-icon">🗺️</div>
           <h3>Mind Mapping</h3>
-          <p>Visualize complex ideas with our intuitive and dynamic mind mapping tools.</p>
+          <p>
+            Visualize complex ideas with our intuitive and dynamic mind mapping
+            tools.
+          </p>
         </div>
         <div className="feature-item">
           <div className="feature-icon">📊</div>
           <h3>Adaptive Learning</h3>
-          <p>Experience personalized growth with our adaptive learning algorithms.</p>
+          <p>
+            Experience personalized growth with our adaptive learning
+            algorithms.
+          </p>
         </div>
         <div className="feature-item">
           <div className="feature-icon">👥</div>
@@ -35,7 +46,57 @@ const About = () => {
         </div>
       </div>
       <div className="cta">
-        <a href="#" className="cta-button">Start Your Journey</a>
+        <a href="#" className="cta-button">
+          Start Your Journey
+        </a>
+      </div>
+
+      <br />
+      <br />
+
+      <div className="header">
+        <h1 className="title">About Us</h1>
+        {/* <div className="subtitle">Amplify Your Mind</div> */}
+      </div>
+
+      <div className="features">
+        <div className="feature-item">
+          <div className="feature-icon">💻</div>
+          <h3>Syed Amanullah Wasti</h3>
+          <p>
+            Syed is a versatile full-stack developer with deep expertise in
+            front-end development using React JS and back-end development with
+            Spring Boot. His proficiency in database management with MySQL
+            allows him to build robust and scalable applications. With a keen
+            eye for detail and a commitment to excellence, Aman leads the
+            development efforts to ensure that every project meets the highest
+            standards.
+          </p>
+        </div>
+        <div className="feature-item">
+          <div className="feature-icon">🔍</div>
+          <h3>Mirza Asfandyar Baig</h3>
+          <p>
+            Asfandyar is our SEO specialist, dedicated to ensuring that our
+            projects achieve optimal visibility and performance on search
+            engines. His skills in search engine optimization guarantee that our
+            solutions are not only innovative but also easily discoverable by
+            our target audience. Asfandyar’s strategic approach to SEO helps us
+            reach and engage with users effectively.
+          </p>
+        </div>
+        <div className="feature-item">
+          <div className="feature-icon">🤖</div>
+          <h3>Ahmed Bashaar</h3>
+          <p>
+            Ahmed is our data science guru, specializing in machine learning,
+            data analysis, and AI integration. His expertise in harnessing data
+            to uncover insights and drive decision-making helps us create
+            intelligent, data-driven solutions. Ahmed’s work ensures that our
+            projects not only meet functional requirements but also leverage the
+            latest advancements in AI and machine learning.
+          </p>
+        </div>
       </div>
     </div>
   );
@@ -50,7 +111,7 @@ const styles = `
     font-family: 'Inter', sans-serif;
     padding: 4rem 2rem;
     max-width: 1200px;
-    margin: 0 auto;
+    margin: 150px auto;
     overflow: hidden;
     position: relative;
   }
@@ -201,6 +262,34 @@ const styles = `
     box-shadow: 0 12px 24px rgba(82, 24, 250, 0.4);
   }
 
+  .about-us {
+    margin-top: 4rem;
+    padding: 2rem;
+    background-color: #1a1a1a;
+    border-radius: 15px;
+    text-align: center;
+  }
+
+  .about-us h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #e848e5;
+  }
+
+  .team-member {
+    margin-bottom: 2rem;
+  }
+
+  .team-member h3 {
+    font-size: 1.5rem;
+    color: #ffffff;
+  }
+
+  .team-member p {
+    font-size: 1rem;
+    color: #BDBDBD;
+  }
+
   @media (max-width: 768px) {
     .about-container {
       padding: 3rem 1.5rem;
@@ -220,6 +309,10 @@ const styles = `
 
     .features {
       grid-template-columns: 1fr;
+    }
+
+    .about-us {
+      padding: 1.5rem;
     }
   }
 `;
