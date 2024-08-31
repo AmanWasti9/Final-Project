@@ -8,7 +8,7 @@ import {
   CircularProgress,
 } from "@mui/material";
 import { firestore } from "../../firebase";
-import { doc, setDoc } from "firebase/firestore";
+import { doc, setDoc, getDoc } from "firebase/firestore";
 import Card from "../Card/card";
 
 export default function Hero() {
@@ -16,30 +16,42 @@ export default function Hero() {
   const [snackbarMessage, setSnackbarMessage] = useState("");
   const [snackbarOpen, setSnackbarOpen] = useState(false);
   const [showCard, setShowCard] = useState(false);
-  const [loading, setLoading] = useState(false); // New state for loading
+  const [loading, setLoading] = useState(false);
 
   const handleJoin = async (e) => {
     e.preventDefault();
     try {
-      await setDoc(doc(firestore, "waitlist", email), {
-        email: email,
-      });
-      setEmail("");
+      const emailRef = doc(firestore, "waitlist", email);
+      const emailDoc = await getDoc(emailRef);
 
-      setSnackbarMessage("Joined Our Waitlist successfully!");
-      setSnackbarOpen(true);
+      if (emailDoc.exists()) {
+        // Email already exists in the waitlist
+        setSnackbarMessage(
+          "Email is already used. Please try a different one."
+        );
+        setSnackbarOpen(true);
+      } else {
+        // Email does not exist, so we add it to the waitlist
+        await setDoc(emailRef, {
+          email: email,
+        });
+        setEmail("");
 
-      // Delay the Snackbar closing to show the message
-      setTimeout(() => {
-        setSnackbarOpen(false);
-        setLoading(true); // Start the loader before showing the card
+        setSnackbarMessage("Joined Our Waitlist successfully!");
+        setSnackbarOpen(true);
 
-        // Simulate a delay for the card to load
+        // Delay the Snackbar closing to show the message
         setTimeout(() => {
-          setLoading(false);
-          setShowCard(true); // Show the Card component after loader
-        }, 2000); // Adjust the delay as needed
-      }, 3000);
+          setSnackbarOpen(false);
+          setLoading(true); // Start the loader before showing the card
+
+          // Simulate a delay for the card to load
+          setTimeout(() => {
+            setLoading(false);
+            setShowCard(true); // Show the Card component after loader
+          }, 2000); // Adjust the delay as needed
+        }, 3000);
+      }
     } catch (error) {
       console.log(error.message);
       setSnackbarMessage("Registration failed. Please try again.");
