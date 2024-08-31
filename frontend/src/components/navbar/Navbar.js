@@ -11,6 +11,10 @@ function Navbar() {
     setIsOpen(!isOpen);
   };
 
+  const closeMenu = () => {
+    setIsOpen(false);
+  };
+
   return (
     <nav className="navbar-container">
       <div className="navbar-wrapper">
@@ -31,7 +35,7 @@ function Navbar() {
         </div>
         <ul className={`text-font nav-menu ${isOpen ? "active" : ""}`}>
           <li className="nav-item">
-            <Link to="/" className="nav-link">
+            <Link to="/" className="nav-link" onClick={closeMenu}>
               Home
             </Link>
           </li>
@@ -42,12 +46,13 @@ function Navbar() {
               smooth={true}
               offset={-20}
               duration={1000}
+              onClick={closeMenu}
             >
               <span className="nav-link">Features</span>
             </ScrollLink>
           </li>
           <li className="nav-item">
-            <Link to="/about" className="nav-link">
+            <Link to="/about" className="nav-link" onClick={closeMenu}>
               About
             </Link>
           </li>
@@ -58,6 +63,7 @@ function Navbar() {
               smooth={true}
               offset={-20}
               duration={1000}
+              onClick={closeMenu}
             >
               <span className="nav-link">Contact</span>
             </ScrollLink>
