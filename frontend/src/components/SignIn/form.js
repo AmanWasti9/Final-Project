@@ -2,56 +2,69 @@ import React, { useEffect, useState } from "react";
 import "./form.css";
 import { Link } from "react-router-dom";
 import {
-  getAuth,
-  createUserWithEmailAndPassword,
-  signInWithPopup,
   GoogleAuthProvider,
+  signInWithEmailAndPassword,
+  signInWithPopup,
 } from "firebase/auth";
-import { useNavigate } from "react-router-dom";
+import { doc, getDoc, setDoc } from "firebase/firestore";
 import { auth, firestore } from "../../firebase";
-import { setDoc, doc, getDoc } from "firebase/firestore";
-import { Snackbar } from "@mui/material";
+import { Snackbar, Alert } from "@mui/material";
+import { useNavigate } from "react-router-dom";
 
-export default function SignUp() {
+export default function SignIn() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [username, setUsername] = useState("");
-  const [snackbarOpen, setSnackbarOpen] = useState(false);
-  const [snackbarMessage, setSnackbarMessage] = useState("");
-  const handleSnackbarClose = () => setSnackbarOpen(false);
-
+  const [loading, setLoading] = useState(false); // Loading state
+  const [openSnackbar, setOpenSnackbar] = useState(false); // Snackbar open state
+  const [snackbarMessage, setSnackbarMessage] = useState(""); // Snackbar message
   const navigate = useNavigate();
 
+  const [snackbarOpen, setSnackbarOpen] = useState(false);
+  const [snackbarMessage2, setSnackbarMessage2] = useState("");
+  const handleSnackbarClose = () => setSnackbarOpen(false);
+
   useEffect(() => {
-    window.scrollTo(0, 0);
+    window.scrollTo(0, 0); // Scrolls to the top of the page
   }, []);
 
-  const handleRegister = async (e) => {
+  const handleLogin = async (e) => {
     e.preventDefault();
-    try {
-      await createUserWithEmailAndPassword(auth, email, password);
-      const user = auth.currentUser;
-      if (user) {
-        await setDoc(doc(firestore, "Users", user.uid), {
-          email: user.email,
-          username: username,
-        });
-      }
-      setEmail("");
-      setPassword("");
-      setUsername("");
-      setSnackbarMessage("User Registered successfully!");
-      setSnackbarOpen(true);
+    setLoading(true); // Start loading
 
-      setTimeout(() => {
-        setSnackbarOpen(false);
-        navigate("/signin"); // Redirect after successful registration
-      }, 3000);
+    try {
+      const userCredential = await signInWithEmailAndPassword(
+        auth,
+        email,
+        password
+      );
+      const user = userCredential.user;
+
+      // Create a document for the user if it doesn't exist
+      await setDoc(
+        doc(firestore, "Users", user.uid),
+        {
+          email: user.email,
+        },
+        { merge: true }
+      );
+
+      // console.log("User Logged In successfully");
+      setSnackbarMessage2(
+        "You have logged in successfully. Please wait while we redirect you to the dashboard."
+      );
+      setOpenSnackbar(true);
+      navigate("/dashboard");
     } catch (error) {
       console.log(error.message);
-      setSnackbarMessage("Registration failed. Please try again.");
-      setSnackbarOpen(true);
+      setSnackbarMessage("Invalid User Details");
+      setOpenSnackbar(true); // Open Snackbar on error
+    } finally {
+      setLoading(false); // End loading
     }
+  };
+
+  const handleCloseSnackbar = () => {
+    setOpenSnackbar(false); // Close Snackbar
   };
 
   const SignUpWithGoogle = async () => {
@@ -82,37 +95,14 @@ export default function SignUp() {
   return (
     <div
       style={{
-        margin: "120px auto",
+        margin: "200px auto",
         display: "flex",
         justifyContent: "center",
         alignItems: "center",
       }}
     >
       <div className="form">
-        <form onSubmit={handleRegister}>
-          <div className="flex-column">
-            <label>Username</label>
-          </div>
-          <div className="inputForm">
-            <svg
-              height="20"
-              viewBox="0 0 32 32"
-              width="20"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <g id="Layer_3" data-name="Layer 3">
-                <path d="m30.853 13.87a15 15 0 0 0 -29.729 4.082 15.1 15.1 0 0 0 12.876 12.918 15.6 15.6 0 0 0 2.016.13 14.85 14.85 0 0 0 7.715-2.145 1 1 0 1 0 -1.031-1.711 13.007 13.007 0 1 1 5.458-6.529 2.149 2.149 0 0 1 -4.158-.759v-10.856a1 1 0 0 0 -2 0v1.726a8 8 0 1 0 .2 10.325 4.135 4.135 0 0 0 7.83.274 15.2 15.2 0 0 0 .823-7.455zm-14.853 8.13a6 6 0 1 1 6-6 6.006 6.006 0 0 1 -6 6z" />
-              </g>
-            </svg>
-            <input
-              type="text"
-              className="input"
-              placeholder="Enter your Email"
-              value={username}
-              onChange={(e) => setUsername(e.target.value)}
-            />
-          </div>
-
+        <form onSubmit={handleLogin}>
           <div className="flex-column">
             <label>Email</label>
           </div>
@@ -176,15 +166,15 @@ export default function SignUp() {
             Sign In
           </button>
           <p className="p">
-            Already have an account?{" "}
-            <Link to="/signin" className="span">
-              Sign In
+            Don't have an account?{" "}
+            <Link to="/signup" className="span">
+              Sign Up
             </Link>
           </p>
           <br />
+
           <p className="p line">Or With</p>
         </form>
-
         <div className="flex-row">
           <button className="btn google">
             <svg
@@ -214,12 +204,26 @@ export default function SignUp() {
         </div>
       </div>
 
+      {/* Snackbar for error messages */}
+      <Snackbar
+        open={openSnackbar}
+        autoHideDuration={6000}
+        onClose={handleCloseSnackbar}
+      >
+        <Alert onClose={handleCloseSnackbar} severity="error">
+          {snackbarMessage}
+        </Alert>
+      </Snackbar>
       <Snackbar
         anchorOrigin={{ vertical: "bottom", horizontal: "right" }}
         autoHideDuration={6000} // Adjust the duration as needed
         open={snackbarOpen}
         onClose={handleSnackbarClose}
-        message={snackbarMessage}
+        message={snackbarMessage2}
+        sx={{
+          backgroundColor: "purple",
+          color: "white",
+        }}
       />
     </div>
   );

@@ -4,6 +4,7 @@ import { Alert, Box, Snackbar, TextField } from "@mui/material";
 import { firestore } from "../../firebase";
 import { doc, setDoc } from "firebase/firestore";
 import Card from "../Card/card";
+import { Link } from "react-router-dom";
 
 const NewHero = () => {
   const [email, setEmail] = useState("");
@@ -73,105 +74,33 @@ const NewHero = () => {
             </div>
           </div>
         </li>
-        {/* <li className="card_nh" id="card3_nh">
-          <div className="card_body_nh1">
-            <div className="card_div1_nh1">
+        <li className="card_nh" id="card3_nh">
+          <div className="card_body_nh">
+            <div className="card_div1_nh">
               <h2
-                className="header-font text-center"
+                className="header-font text-center res-cog"
                 style={{
                   background: "linear-gradient(to bottom, #e848e5, #5218fa)",
                   WebkitBackgroundClip: "text",
                   WebkitTextFillColor: "transparent",
-                  fontSize: "6rem",
                 }}
               >
-                Cogni
+                COGNI
               </h2>
               <br />
-              <Box
-                className="fluid-gradient"
-                component="form"
-                onSubmit={handleJoin}
-              >
-                <TextField
-                  type="email"
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
-                  placeholder="Enter Your Email"
-                  sx={{
-                    "& .MuiOutlinedInput-root": {
-                      position: "relative",
-                      width: "300px",
-                      "&:before": {
-                        content: '""',
-                        position: "absolute",
-                        top: 0,
-                        left: 0,
-                        right: 0,
-                        bottom: 0,
-                        borderRadius: "4px",
-                        padding: "2px",
-                        background:
-                          "linear-gradient(to bottom, #e848e5, #5218fa)",
-                        WebkitMask:
-                          "linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)",
-                        mask: "linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)",
-                        WebkitMaskComposite: "xor",
-                        maskComposite: "exclude",
-                      },
-                      "& fieldset": {
-                        borderColor: "transparent",
-                      },
-                      "&:hover fieldset": {
-                        borderColor: "transparent",
-                      },
-                      "&.Mui-focused fieldset": {
-                        borderColor: "transparent",
-                      },
-                      color: "white",
-                    },
-                    "& .MuiOutlinedInput-input": {
-                      color: "white",
-                    },
-                  }}
-                  InputLabelProps={{
-                    style: { color: "white" },
-                  }}
-                  InputProps={{
-                    style: { color: "white" },
-                  }}
-                />
-                <button className="hero-button" type="submit">
-                  Join
-                </button>
+              <Box className="fluid-gradient" component="form">
+                <Link
+                  to="/signup"
+                  className="hero-button txt-dec"
+                  type="submit"
+                >
+                  Get Started
+                </Link>
               </Box>
             </div>
-            <div>
-              <div
-                style={{ height: "90vh", width: "50vw", marginTop: "150px" }}
-              >
-                {showCard && <Card userName={userName} />}
-              </div>
-            </div>
           </div>
-        </li> */}
+        </li>
       </ul>
-      {/* <Snackbar
-        open={snackbarOpen}
-        autoHideDuration={3000}
-        onClose={() => setSnackbarOpen(false)}
-      >
-        <Alert
-          onClose={() => setSnackbarOpen(false)}
-          severity={
-            snackbarMessage === "Joined Our Waitlist successfully!"
-              ? "success"
-              : "error"
-          }
-        >
-          {snackbarMessage}
-        </Alert>
-      </Snackbar> */}
     </div>
   );
 };

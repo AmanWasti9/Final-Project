@@ -9,7 +9,7 @@ export default function HomePage() {
   return (
     <Container>
       <NewHero />
-      <Hero />
+      {/* <Hero /> */}
       <br />
       <br />
       <FeatSlider />
